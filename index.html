@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS Grids</title>
+<style>
+	body { background-color: #0d4e85}
+.webpage {
+		display: grid;
+		grid-auto-columns: 3fr 3fr 3fr 3fr;
+		grid-auto-rows: 3fr 3fr 3fr 3fr;
+  grid-template-areas:
+    'header header header header header header'
+    'menu main main main right right'
+    'menu footer footer footer footer footer';
+  grid-gap: 10px;
+	}
+	.webpage > div {
+		background-color:#d9d1ba;	
+	}
+	.Header {
+		grid-area: 1 / 1 / 2 / 7;
+		text-align: center;
+		padding: 20px;
+		font-size: 40px
+		}
+	.Menu {
+		grid-area: 2 / 1 / 6 / 2;
+		padding: 10px;
+		text-align: center;
+	}
+	.Main {
+		grid-area:  2 / 2 / 5 / 6;
+		text-align: center
+		}
+	.Right {
+		grid-area: 2 / 6 / 6 / 7;
+		text-align: center;
+		padding: 10px
+	}
+	.Footer {
+		grid-area: 5 / 1 / 6 / 7;
+		text-align: center;
+		padding: 20px
+	}
+	ul {
+		list-style-type: none;
+		margin: 1px;
+		padding: 1px;
+		overflow: hidden;
+		text-align: center;
+		background-color: #0d4e85;
+	}
+	li a {
+		display: flow-root;
+		color: white;
+		text-align: center;
+		padding: 16px;
+		text-decoration: none;
+	}
+	li a:hover {background-color: #d9d1ba;}
+	
+	
+</style>
+</head>
+
+<body>
+	<div class="webpage">
+		
+		<div class="Header"><b>Welcome</b>
+		<br>
+			<ul style="font-size: 20px">
+				<li><a herf="#home">Home</a></li>
+				<li><a herf="#message">Message of the day</a></li>
+				<li><a herf="#extras">Extras</a></li>
+				<li><a herf="#blog">Blog</a></li>
+				<li><a herf="#about">About Us</a></li>
+				<li><a herf="#contact">Contact Us</a></li>
+			</ul>
+		</div>
+		
+		<div class="Menu"><b style=" font-size: 40px;">Menu</b>
+			<br>
+			<ul>
+			<li><a herf="#home">Home</a></li>
+				<li><a herf="#message">Message of the day</a></li>
+				<li><a herf="#extras">Extras</a></li>
+				<li><a herf="#blog">Blog</a></li>
+				<li><a herf="#about">About Us</a></li>
+				<li><a herf="#contact">Contact Us</a></li>
+			</ul>
+		</div>
+		
+		<div class="Main">
+			<h1 style="text-align: center"><b style="color: #8094a6">Some Art Work</b> </h1>
+			<img src="images/squarecartoon.jpg" alt="cartoon">
+				<br>
+				<br>
+				<br>
+			<img src="images/pink.jpg" alt="Pink Penguin">
+		</div>
+		
+		<div class="Right"><b style="font-size: 40px">Inspirational Message</b>
+			<br>
+			<br>
+			<em style="font-size: 70px">The puprose of the first draft is not to get it right. But to get it written.</em>
+			
+		
+		</div>
+		
+		<div class="Footer"><i> Follow all Social Media!</i>
+		<br>
+			Twitter:<a href="https://www.twitter.com"><b>Twitter Name</b></a> Instagram:<a href="https://www.instagram.com"><b>Instagram Name</b></a>
+		</div>
+	</div>
+</body>
+</html>
